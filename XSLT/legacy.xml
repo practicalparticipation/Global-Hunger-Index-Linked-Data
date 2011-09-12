@@ -11,8 +11,20 @@
 
 <xsl:template match="*">
 	<rdf:RDF>
+		<rdf:Description rdf:about="http://data.ifpri.org/rdf/ghi/2010/qb/#2010-GHI-Report">
+			<rdf:type rdf:resource="http://purl.org/linked-data/cube#DataSet"/>
+			<qb:structure rdf:resource="http://data.ifpri.org/rdf/ghi/structure/#GHI-Report-dsd"/>
+			<rdfs:label>Global Hunger Index 2010 Report Data</rdfs:label>
+			<rdfs:comment>Due to enhancements and revisions to the underlying data in the 2010 Global Hunger Index, figures are not directly comparable to previous years. See the 2010 GHI Report for more details.</rdfs:comment>
+			<rdfs:seeAlso rdf:resource="http://www.ifpri.org/publication/2010-global-hunger-index"/>
+			<dcterms:title xml:lang="en">2010 Global Hunger Index Data</dcterms:title>
+			<dcterms:description xml:lang="en">Data and supporting data for the 2010 Global Hunger Index, including revised comparison data for 1990. An innovative, enhanced approach for measuring hunger and undernutrition</dcterms:description>
+			<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-10-01</dcterms:created>
+		</rdf:Description>
+		
 		<xsl:for-each select="//res:result">
 			<rdf:Description rdf:about="http://data.ifpri.org/rdf/ghi/2010/qb/#observation-{substring(string(res:binding[@name='observation']/res:uri),61)}">
+				<rdf:type rdf:resource="http://purl.org/linked-data/cube#Observation"/>
 				<owl:sameAs><xsl:value-of select="res:binding[@name='observation']/res:uri"/></owl:sameAs>
 				<ghiqb:refArea rdf:resource="{res:binding[@name='area']/res:uri}"/>
 				<ghiqb:refPeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#date"><xsl:value-of select="res:binding[@name='period']/res:literal"/>-01-01</ghiqb:refPeriod>
