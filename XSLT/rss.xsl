@@ -25,7 +25,7 @@
 	</rss:item>
 	
 </xsl:for-each>
-	
+	</rdf:RDF>
 </xsl:template>
 	
 </xsl:stylesheet>
