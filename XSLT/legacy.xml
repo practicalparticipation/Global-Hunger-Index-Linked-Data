@@ -12,10 +12,11 @@
 <xsl:template match="*">
 	<rdf:RDF>
 		<xsl:for-each select="//res:result">
-			<rdf:Description rdf:about="{res:binding[@name='observation']/res:uri}">
+			<rdf:Description rdf:about="http://data.ifpri.org/rdf/ghi/2010/qb/#observation-{substring(string(res:binding[@name='observation']/res:uri),61)}">
+				<owl:sameAs><xsl:value-of select="res:binding[@name='observation']/res:uri"/></owl:sameAs>
 				<ghiqb:refArea rdf:resource="{res:binding[@name='area']/res:uri}"/>
 				<ghiqb:refPeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#date"><xsl:value-of select="res:binding[@name='period']/res:literal"/>-01-01</ghiqb:refPeriod>
-				<ghiqb:ghi><xsl:value-of select="res:bindings[@name='ghi']/res:literal"/></ghiqb:ghi>
+				<ghiqb:ghi><xsl:value-of select="res:binding[@name='ghi']/res:literal"/></ghiqb:ghi>
 				<ghiqb:supportingData-pun rdf:datatype="http://www.w3.org/2001/XMLSchema#double"><xsl:value-of select="res:binding[@name='punValue']/res:literal"/></ghiqb:supportingData-pun>
 				<ghiqb:supporingData-cuw rdf:datatype="http://www.w3.org/2001/XMLSchema#double"><xsl:value-of select="res:binding[@name='cuwValue']/res:literal"/></ghiqb:supporingData-cuw>
 				<ghiqb:supportingData-cm rdf:datatype="http://www.w3.org/2001/XMLSchema#double"><xsl:value-of select="res:binding[@name='cmValue']/res:literal"/></ghiqb:supportingData-cm>
