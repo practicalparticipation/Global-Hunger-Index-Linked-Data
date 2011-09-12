@@ -7,8 +7,8 @@
 	xmlns:qb="http://purl.org/linked-data/cube#">
 	<xsl:output method="xml" version="1.0" encoding="utf-8" indent="yes"/>
 
-<xsl:template match="/">
-	<xsl:for-each select="//result">
+<xsl:template match="//result">
+	<xsl:for-each select="/">
 		<rdf:Description rdf:about="http://data.ifpri.org/rdf/ghi/2010/qb/#observation-{substring(binding[name='observation']/uri,-7)}">
 			<ghiqb:refArea rdf:resource="{bindings[name='area']}"/>
 			<ghiqb:refPeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#date"><xsl:value-of select="bindings[name='period']"/>-01-01</ghiqb:refPeriod>
