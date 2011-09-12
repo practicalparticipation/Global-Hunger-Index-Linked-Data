@@ -5,9 +5,6 @@
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:ghiqb="http://data.ifpri.org/rdf/ghi/structure/#">
 	<xsl:output method="xml" version="1.0" encoding="utf-8" indent="yes"/>
-	
-<xsl:stylesheet version="1.0"
-xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template match="/">
 	<xsl:for-each select="//result">
