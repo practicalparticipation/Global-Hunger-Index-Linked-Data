@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xsl:stylesheet version="1.0" exclude-result-prefixes="res xsl" xmlns:res="http://www.w3.org/2005/sparql-results#"
+<xsl:stylesheet version="1.0" exclude-result-prefixes="res xsl"
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:res="http://www.w3.org/2005/sparql-results#"
 	xmlns="http://purl.org/rss/1.0/">
 	<xsl:output method="xml" indent="yes" media-type="application/xml"/>
 
