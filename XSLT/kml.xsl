@@ -16,7 +16,7 @@
     <name><xsl:value-of select="res:binding[@name='areaName']/res:literal"/></name>
     <description><xsl:value-of select="res:binding[@name='referenceYear']/res:literal"/> GHI Value: <xsl:value-of select="res:binding[@name='ghi']/res:literal"/></description>
     <Point>
-      <coordinates><xsl:value-of select="res:binding[@name='long']/res:literal"/>,<xsl:value-of select="res:binding[@name='lat']/res:literal"/></coordinates>
+      <coordinates><xsl:value-of select="res:binding[@name='long']/res:literal"/>,<xsl:value-of select="res:binding[@name='lat']/res:literal"/>,0</coordinates>
     </Point>
   </Placemark>
 
