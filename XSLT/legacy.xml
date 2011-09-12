@@ -3,7 +3,8 @@
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
-	xmlns:ghiqb="http://data.ifpri.org/rdf/ghi/structure/#">
+	xmlns:ghiqb="http://data.ifpri.org/rdf/ghi/structure/#"
+	xmlns:qb="http://purl.org/linked-data/cube#">
 	<xsl:output method="xml" version="1.0" encoding="utf-8" indent="yes"/>
 
 <xsl:template match="/">
@@ -17,7 +18,7 @@
 			<ghiqb:supportingData-cm rdf:datatype="http://www.w3.org/2001/XMLSchema#double"><xsl:value-of select="bindings[name='cmValue']"/></ghiqb:supportingData-cm>
 			<qb:dataSet rdf:resource="http://data.ifpri.org/rdf/ghi/2010/qb/#2010-GHI-Report"/>	
 		</rdf:Description>
-	
+	</xsl:for-each>
 </xsl:template>
 	
 	
