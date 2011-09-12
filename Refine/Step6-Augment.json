@@ -1,0 +1,404 @@
+[
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Country",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "value",
+          "selectError": true,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "GeoNamesCountry",
+          "omitBlank": false,
+          "columnName": "GeoNamesCountry",
+          "type": "list",
+          "selection": []
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Country",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Congo, Dem. Rep."
+        ],
+        "to": "Democratic Republic of Congo"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Country",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "value",
+          "selectError": true,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "GeoNamesCountry",
+          "omitBlank": false,
+          "columnName": "GeoNamesCountry",
+          "type": "list",
+          "selection": []
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Country",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Congo, Rep."
+        ],
+        "to": "Republic of Congo"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Country",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "value",
+          "selectError": true,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "GeoNamesCountry",
+          "omitBlank": false,
+          "columnName": "GeoNamesCountry",
+          "type": "list",
+          "selection": []
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Country",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Egypt, Arab Rep."
+        ],
+        "to": "Egypt"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Country",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "value",
+          "selectError": true,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "GeoNamesCountry",
+          "omitBlank": false,
+          "columnName": "GeoNamesCountry",
+          "type": "list",
+          "selection": []
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Country",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Iran, Islamic Rep."
+        ],
+        "to": "Iran"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Country",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "value",
+          "selectError": true,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "GeoNamesCountry",
+          "omitBlank": false,
+          "columnName": "GeoNamesCountry",
+          "type": "list",
+          "selection": []
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Country",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Lao PDR"
+        ],
+        "to": "Lao"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Country",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "value",
+          "selectError": true,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "GeoNamesCountry",
+          "omitBlank": false,
+          "columnName": "GeoNamesCountry",
+          "type": "list",
+          "selection": []
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Country",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Macedonia, FYR"
+        ],
+        "to": "Macedonia"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Country",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "value",
+          "selectError": true,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "GeoNamesCountry",
+          "omitBlank": false,
+          "columnName": "GeoNamesCountry",
+          "type": "list",
+          "selection": []
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Country",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Venezuela, RB"
+        ],
+        "to": "Venezuela"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Country",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "value",
+          "selectError": true,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "GeoNamesCountry",
+          "omitBlank": false,
+          "columnName": "GeoNamesCountry",
+          "type": "list",
+          "selection": []
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Country",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Yemen, Rep."
+        ],
+        "to": "Yemen"
+      }
+    ]
+  },
+  {
+    "op": "core/column-addition-by-fetching-urls",
+    "description": "Create column CountryData at index 1 by fetching URLs based on column Country using expression grel:\"http://api.geonames.org/searchJSON?q=\"+escape(value,\"url\")+\"&maxRows=1&style=LONG&featureClass=A&username=demo\"",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "value",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": true,
+          "name": "GeoNamesCountry",
+          "omitBlank": false,
+          "columnName": "GeoNamesCountry",
+          "type": "list",
+          "selection": []
+        }
+      ],
+      "mode": "row-based"
+    },
+    "newColumnName": "CountryData",
+    "columnInsertIndex": 1,
+    "baseColumnName": "Country",
+    "urlExpression": "grel:\"http://api.geonames.org/searchJSON?q=\"+escape(value,\"url\")+\"&maxRows=1&style=LONG&featureClass=A&username=timdavies\"",
+    "onError": "set-to-blank",
+    "delay": 5
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CountryData using expression grel:'\n{\"totalResultsCount\":220,\"geonames\":[{\"countryName\":\"Congo [Republic]\",\"adminCode1\":\"00\",\"fclName\":\"country, state, region,...\",\"countryCode\":\"CG\",\"lng\":15,\"fcodeName\":\"independent political entity\",\"toponymName\":\"Republic of the Congo\",\"fcl\":\"A\",\"name\":\"Republic of the Congo\",\"fcode\":\"PCLI\",\"geonameId\":2260494,\"lat\":-1,\"adminName1\":\"\",\"population\":3039126}]}'",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "value",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Country",
+          "omitBlank": false,
+          "columnName": "Country",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Republic of Congo",
+                "l": "Republic of Congo"
+              }
+            }
+          ]
+        },
+        {
+          "invert": false,
+          "expression": "value",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "GeoNamesCountry",
+          "omitBlank": false,
+          "columnName": "GeoNamesCountry",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Congo [DRC]",
+                "l": "Congo [DRC]"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "CountryData",
+    "expression": "grel:'\n{\"totalResultsCount\":220,\"geonames\":[{\"countryName\":\"Congo [Republic]\",\"adminCode1\":\"00\",\"fclName\":\"country, state, region,...\",\"countryCode\":\"CG\",\"lng\":15,\"fcodeName\":\"independent political entity\",\"toponymName\":\"Republic of the Congo\",\"fcl\":\"A\",\"name\":\"Republic of the Congo\",\"fcode\":\"PCLI\",\"geonameId\":2260494,\"lat\":-1,\"adminName1\":\"\",\"population\":3039126}]}'",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column GeoNamesCountry at index 2 based on column CountryData using expression grel:value.parseJson().geonames[0].countryName",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "value",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": true,
+          "name": "GeoNamesCountry",
+          "omitBlank": false,
+          "columnName": "GeoNamesCountry",
+          "type": "list",
+          "selection": []
+        }
+      ],
+      "mode": "row-based"
+    },
+    "newColumnName": "GeoNamesCountry",
+    "columnInsertIndex": 2,
+    "baseColumnName": "CountryData",
+    "expression": "grel:value.parseJson().geonames[0].countryName",
+    "onError": "store-error"
+  },
+[
+  {
+    "op": "core/column-addition",
+    "description": "Create column CountryCode at index 2 based on column CountryData using expression grel:value.parseJson().geonames[0].countryCode",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "CountryCode",
+    "columnInsertIndex": 2,
+    "baseColumnName": "CountryData",
+    "expression": "grel:value.parseJson().geonames[0].countryCode",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column GeonamesID at index 2 based on column CountryData using expression grel:value.parseJson().geonames[0].geonameId",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "GeonamesID",
+    "columnInsertIndex": 2,
+    "baseColumnName": "CountryData",
+    "expression": "grel:value.parseJson().geonames[0].geonameId",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column CountryData",
+    "columnName": "CountryData"
+  }
+]
+]

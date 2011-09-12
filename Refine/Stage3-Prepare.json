@@ -1,0 +1,126 @@
+[
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column PUN:1990-92:Estimate using expression grel:if(value==\"*\",1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "PUN:1990-92:Estimate",
+    "expression": "grel:if(value==\"*\",1,0)",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column PUN:2004-06:Estimate using expression grel:if(value==\"*\",1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "PUN:2004-06:Estimate",
+    "expression": "grel:if(value==\"*\",1,0)",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column PUW:1988-92:Estimate using expression grel:if(value==\"*\",1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "PUW:1988-92:Estimate",
+    "expression": "grel:if(value==\"*\",1,0)",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column PUW:2003-08Estimate using expression grel:if(value==\"*\",1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "PUW:2003-08Estimate",
+    "expression": "grel:if(value==\"*\",1,0)",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column PUN:1990-92 using expression grel:value+\":\"+cells[\"PUN:1990-92:Estimate\"].value",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "PUN:1990-92",
+    "expression": "grel:value+\":\"+cells[\"PUN:1990-92:Estimate\"].value",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column PUN:2004-06 using expression grel:value+\":\"+cells[\"PUN:2004-06:Estimate\"].value",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "PUN:2004-06",
+    "expression": "grel:value+\":\"+cells[\"PUN:2004-06:Estimate\"].value",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column PUW:1988-92 using expression grel:value+\":\"+cells[\"PUW:1988-92:Estimate\"].value",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "PUW:1988-92",
+    "expression": "grel:value+\":\"+cells[\"PUW:1988-92:Estimate\"].value",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column PUW:2003-08 using expression grel:value+\":\"+cells[\"PUW:2003-08:Estimate\"].value",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "PUW:2003-08",
+    "expression": "grel:value+\":\"+cells[\"PUW:2003-08:Estimate\"].value",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column PUN:1990-92:Estimate",
+    "columnName": "PUN:1990-92:Estimate"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column PUN:2004-06:Estimate",
+    "columnName": "PUN:2004-06:Estimate"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column PUW:1988-92:Estimate",
+    "columnName": "PUW:1988-92:Estimate"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column PUW:2003-08:Estimate",
+    "columnName": "PUW:2003-08:Estimate"
+  }
+]

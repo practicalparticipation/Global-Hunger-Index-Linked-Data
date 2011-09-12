@@ -1,0 +1,80 @@
+[
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Data underlying the calculation of the 1990 and 2010 Global Hunger Indices Country to Country",
+    "oldColumnName": "Data underlying the calculation of the 1990 and 2010 Global Hunger Indices Country",
+    "newColumnName": "Country"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Proportion of undernourished in the population (%) 1990-92 to PUN1990-92",
+    "oldColumnName": "Proportion of undernourished in the population (%) 1990-92",
+    "newColumnName": "PUN:1990-92"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Column 2 to PUN1990-92Estimate",
+    "oldColumnName": "Column 2",
+    "newColumnName": "PUN:1990-92:Estimate"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column 2004-06 to PUN2004-06",
+    "oldColumnName": "2004-06",
+    "newColumnName": "PUN:2004-06"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Column 3 to PUN2004-06Estimate",
+    "oldColumnName": "Column 3",
+    "newColumnName": "PUN:2004-06:Estimate"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Prevalence of underweight in children under five years (%) 1988-92 to PUW1988-92",
+    "oldColumnName": "Prevalence of underweight in children under five years (%) 1988-92",
+    "newColumnName": "PUW:1988-92"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Column 4 to PUW1988-92Estimate",
+    "oldColumnName": "Column 4",
+    "newColumnName": "PUW:1988-92:Estimate"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column 2003-08 to PUW2003-08",
+    "oldColumnName": "2003-08",
+    "newColumnName": "PUW:2003-08"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Column to PUW2003-08Estimate",
+    "oldColumnName": "Column",
+    "newColumnName": "PUW:2003-08:Estimate"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Under five mortality rate (%) 1990.0 to U5MR1990",
+    "oldColumnName": "Under five mortality rate (%) 1990.0",
+    "newColumnName": "U5MR:1990"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column 2008.0 to U5MR2008",
+    "oldColumnName": "2008.0",
+    "newColumnName": "U5MR:2008"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column GHI 1990               (with data from 1988-92) to GHI1990",
+    "oldColumnName": "GHI 1990               (with data from 1988-92)",
+    "newColumnName": "GHI:1990"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column 2010                    (with data from 2003-08) to GHI2010",
+    "oldColumnName": "2010                    (with data from 2003-08)",
+    "newColumnName": "GHI:2010"
+  }
+]

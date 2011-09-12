@@ -1,0 +1,1219 @@
+[
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://localhost:3333/",
+      "prefixes": [
+        {
+          "name": "dc",
+          "uri": "http://purl.org/dc/terms/"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "foaf",
+          "uri": "http://xmlns.com/foaf/0.1/"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "xsd",
+          "uri": "http://www.w3.org/2001/XMLSchema#"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "qb",
+          "uri": "http://purl.org/linked-data/cube#"
+        },
+        {
+          "name": "skos",
+          "uri": "http://www.w3.org/2004/02/skos/core#"
+        },
+        {
+          "name": "ghiqb",
+          "uri": "http://data.kasabi.com/dataset/global-hunger-index/structure/"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "substring(cells[\"StructureURI\"].value,0,-1)",
+          "isRowNumberCell": true,
+          "rdfTypes": [
+            {
+              "uri": "http://purl.org/linked-data/cube#DataStructureDefinition",
+              "curie": "qb:DataStructureDefinition"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://purl.org/linked-data/cube#component",
+              "curie": "qb:component",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "cells[\"StructureURI\"].value+\"c1\"",
+                "isRowNumberCell": true,
+                "rdfTypes": [],
+                "links": [
+                  {
+                    "uri": "http://purl.org/linked-data/cube#dimension",
+                    "curie": "qb:dimension",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "cells[\"StructureURI\"].value+\"refArea\"",
+                      "isRowNumberCell": true,
+                      "rdfTypes": [
+                        {
+                          "uri": "http://purl.org/linked-data/cube#DimensionProperty",
+                          "curie": "qb:DimensionProperty"
+                        },
+                        {
+                          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                          "curie": "rdf:Property"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "uri": "http://purl.org/linked-data/cube#concept",
+                          "curie": "qb:concept",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://purl.org/linked-data/sdmx/2009/concept#refArea",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+                          "curie": "rdfs:label",
+                          "target": {
+                            "nodeType": "literal",
+                            "value": "Reference Area",
+                            "lang": "en"
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+                          "curie": "rdfs:subPropertyOf",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://purl.org/linked-data/sdmx/2009/dimension#refArea",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "uri": "http://purl.org/linked-data/cube#order",
+                    "curie": "qb:order",
+                    "target": {
+                      "nodeType": "literal",
+                      "value": "1",
+                      "valueType": "http://www.w3.org/2001/XMLSchema#int"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://purl.org/linked-data/cube#component",
+              "curie": "qb:component",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "cells[\"StructureURI\"].value+\"c2\"",
+                "isRowNumberCell": true,
+                "rdfTypes": [],
+                "links": [
+                  {
+                    "uri": "http://purl.org/linked-data/cube#dimension",
+                    "curie": "qb:dimension",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "cells[\"StructureURI\"].value+\"refPeriod\"",
+                      "isRowNumberCell": true,
+                      "rdfTypes": [
+                        {
+                          "uri": "http://purl.org/linked-data/cube#DimensionProperty",
+                          "curie": "qb:DimensionProperty"
+                        },
+                        {
+                          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                          "curie": "rdf:Property"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "uri": "http://purl.org/linked-data/cube#concept",
+                          "curie": "qb:concept",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://purl.org/linked-data/sdmx/2009/concept#refPeriod",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+                          "curie": "rdfs:label",
+                          "target": {
+                            "nodeType": "literal",
+                            "value": "Reference Period",
+                            "lang": "en"
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+                          "curie": "rdfs:subPropertyOf",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://purl.org/linked-data/sdmx/2009/dimension#refPeriod",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "uri": "http://purl.org/linked-data/cube#order",
+                    "curie": "qb:order",
+                    "target": {
+                      "nodeType": "literal",
+                      "value": "2",
+                      "valueType": "http://www.w3.org/2001/XMLSchema#int"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://purl.org/linked-data/cube#component",
+              "curie": "qb:component",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "cells[\"StructureURI\"].value+\"c3\"",
+                "isRowNumberCell": true,
+                "rdfTypes": [],
+                "links": [
+                  {
+                    "uri": "http://purl.org/linked-data/cube#dimension",
+                    "curie": "qb:dimension",
+                    "target": {
+                      "nodeType": "resource",
+                      "value": "http://purl.org/linked-data/cube#measureType",
+                      "rdfTypes": [],
+                      "links": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://purl.org/linked-data/cube#component",
+              "curie": "qb:component",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "cells[\"StructureURI\"].value+\"c4\"",
+                "isRowNumberCell": true,
+                "rdfTypes": [],
+                "links": [
+                  {
+                    "uri": "http://purl.org/linked-data/cube#measure",
+                    "curie": "qb:measure",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "cells[\"StructureURI\"].value+\"supportingDataPUN\"",
+                      "isRowNumberCell": true,
+                      "rdfTypes": [
+                        {
+                          "uri": "http://purl.org/linked-data/cube#MeasureProperty",
+                          "curie": "qb:MeasureProperty"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+                          "curie": "rdfs:label",
+                          "target": {
+                            "nodeType": "literal",
+                            "value": "Proportion of the the population that is undernourished (in %)",
+                            "lang": "en"
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#comment",
+                          "curie": "rdfs:comment",
+                          "target": {
+                            "nodeType": "literal",
+                            "value": "(1990) Undernourishment statistics for the 1990 GHI are based on data from 1990 - 1992",
+                            "lang": "en"
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#comment",
+                          "curie": "rdfs:comment",
+                          "target": {
+                            "nodeType": "literal",
+                            "value": "Statistics taken from 'State of food insecurity in the world 2009', FAO 2009, and based on an average over a three-year period where available. Some statistics based on authors estimates: see data cube slices for details.",
+                            "lang": "en"
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#comment",
+                          "curie": "rdfs:comment",
+                          "target": {
+                            "nodeType": "literal",
+                            "value": "(2010) Undernourishment statistics for the 2010 GHI are based on data from 2004 - 2006",
+                            "lang": "en"
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+                          "curie": "rdfs:subPropertyOf",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://purl.org/linked-data/sdmx/2009/measure#obsValue",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+                          "curie": "rdfs:seeAlso",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://faostat.fao.org",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://purl.org/linked-data/cube#component",
+              "curie": "qb:component",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "cells[\"StructureURI\"].value+\"c5\"",
+                "isRowNumberCell": true,
+                "rdfTypes": [],
+                "links": [
+                  {
+                    "uri": "http://purl.org/linked-data/cube#measure",
+                    "curie": "qb:measure",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "cells[\"StructureURI\"].value+\"supportingDataPUW\"",
+                      "isRowNumberCell": true,
+                      "rdfTypes": [
+                        {
+                          "uri": "http://purl.org/linked-data/cube#MeasureProperty",
+                          "curie": "qb:MeasureProperty"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+                          "curie": "rdfs:label",
+                          "target": {
+                            "nodeType": "literal",
+                            "value": "Prevelance of underweight in children under five (in %)",
+                            "lang": "en"
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+                          "curie": "rdfs:subPropertyOf",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://purl.org/linked-data/sdmx/2009/measure#obsValue",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#comment",
+                          "curie": "rdfs:comment",
+                          "target": {
+                            "nodeType": "literal",
+                            "value": "(1990) Child underweight statistics for the 1990 GHI are based on data from 1988 - 1992",
+                            "lang": "en"
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#comment",
+                          "curie": "rdfs:comment",
+                          "target": {
+                            "nodeType": "literal",
+                            "value": "(2010) Child underweight statistics for the 2010 GHI are based on data from 2003 - 2008",
+                            "lang": "en"
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#comment",
+                          "curie": "rdfs:comment",
+                          "target": {
+                            "nodeType": "literal",
+                            "value": "1990 Statistics are based on 'Global database on child growth and malnutrition', WHO, 2010. Some statistics based on authors estimates: see data cube slices for details.",
+                            "lang": "en"
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#comment",
+                          "curie": "rdfs:comment",
+                          "target": {
+                            "nodeType": "literal",
+                            "value": "2010 Statistics are based on 'Global database on child growth and malnutrition', WHO, 2010; 'Childinfo statistics on child nutrition.', UNICEF, 2010; and 'Demographic health surveys', MEASURE DHS, 2010. WHO 2010 is the primary data source and others are secondard. Some statistics based on authors estimates: see data cube slices for details.",
+                            "lang": "en"
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+                          "curie": "rdfs:seeAlso",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://www.childinfo.org/undernutrition_underweight.php",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+                          "curie": "rdfs:seeAlso",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://www.measuredhs.com/",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+                          "curie": "rdfs:seeAlso",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://www.who.int/nutgrowthdb/",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://purl.org/linked-data/cube#component",
+              "curie": "qb:component",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "cells[\"StructureURI\"].value+\"c6\"",
+                "isRowNumberCell": true,
+                "rdfTypes": [],
+                "links": [
+                  {
+                    "uri": "http://purl.org/linked-data/cube#measure",
+                    "curie": "qb:measure",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "cells[\"StructureURI\"].value+\"supportingDataU5MR\"",
+                      "isRowNumberCell": true,
+                      "rdfTypes": [
+                        {
+                          "uri": "http://purl.org/linked-data/cube#MeasureProperty",
+                          "curie": "qb:MeasureProperty"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+                          "curie": "rdfs:label",
+                          "target": {
+                            "nodeType": "literal",
+                            "value": "Proportion of children dying before the age of five (in %)",
+                            "lang": "en"
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#comment",
+                          "curie": "rdfs:comment",
+                          "target": {
+                            "nodeType": "literal",
+                            "value": "(1990) Under five mortality statistics for the 1990 GHI are based on data from 1990",
+                            "lang": "en"
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#comment",
+                          "curie": "rdfs:comment",
+                          "target": {
+                            "nodeType": "literal",
+                            "value": "(2010) Under five mortality statistics for the 2010 GHI are based on data from 2008",
+                            "lang": "en"
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#comment",
+                          "curie": "rdfs:comment",
+                          "target": {
+                            "nodeType": "literal",
+                            "value": "Statistics taken from 'Tracking progress on child and maternal nutrition: A survival and development priority', UNICEF 2009\"",
+                            "lang": "en"
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+                          "curie": "rdfs:seeAlso",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://www.unicef.org/publications/index_51656.html",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+                          "curie": "rdfs:subPropertyOf",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://purl.org/linked-data/sdmx/2009/measure#obsValue",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://purl.org/linked-data/cube#component",
+              "curie": "qb:component",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "cells[\"StructureURI\"].value+\"c7\"",
+                "isRowNumberCell": true,
+                "rdfTypes": [],
+                "links": [
+                  {
+                    "uri": "http://purl.org/linked-data/cube#dimension",
+                    "curie": "qb:dimension",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "cells[\"StructureURI\"].value+\"obsStatus\"",
+                      "isRowNumberCell": true,
+                      "rdfTypes": [
+                        {
+                          "uri": "http://purl.org/linked-data/cube#DimensionProperty",
+                          "curie": "qb:DimensionProperty"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+                          "curie": "rdfs:label",
+                          "target": {
+                            "nodeType": "literal",
+                            "value": "Observation Status",
+                            "lang": "en"
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+                          "curie": "rdfs:subPropertyOf",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://purl.org/linked-data/sdmx/2009/concept#obsStatus",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#comment",
+                          "curie": "rdfs:comment",
+                          "target": {
+                            "nodeType": "literal",
+                            "value": "Indicates whether or not the value is an estimate. ",
+                            "lang": "en"
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#range",
+                          "curie": "rdfs:range",
+                          "target": {
+                            "nodeType": "cell-as-resource",
+                            "expression": "cells[\"StructureURI\"].value+\"codes-obsStatus\"",
+                            "isRowNumberCell": true,
+                            "rdfTypes": [
+                              {
+                                "uri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+                                "curie": "skos:ConceptScheme"
+                              }
+                            ],
+                            "links": [
+                              {
+                                "uri": "http://www.w3.org/2004/02/skos/core#hasTopConcept",
+                                "curie": "skos:hasTopConcept",
+                                "target": {
+                                  "nodeType": "cell-as-resource",
+                                  "expression": "cells[\"StructureURI\"].value+\"obsStatus-A\"",
+                                  "isRowNumberCell": true,
+                                  "rdfTypes": [
+                                    {
+                                      "uri": "http://www.w3.org/2004/02/skos/core#Concept",
+                                      "curie": "skos:Concept"
+                                    }
+                                  ],
+                                  "links": [
+                                    {
+                                      "uri": "http://www.w3.org/2004/02/skos/core#prefLabel",
+                                      "curie": "skos:prefLabel",
+                                      "target": {
+                                        "nodeType": "literal",
+                                        "value": "Normal",
+                                        "lang": "en"
+                                      }
+                                    },
+                                    {
+                                      "uri": "http://www.w3.org/2004/02/skos/core#inScheme",
+                                      "curie": "skos:inScheme",
+                                      "target": {
+                                        "nodeType": "cell-as-literal",
+                                        "expression": "cells[\"StructureURI\"].value+\"codes-obsStatus\"",
+                                        "isRowNumberCell": true
+                                      }
+                                    },
+                                    {
+                                      "uri": "http://www.w3.org/2004/02/skos/core#definition",
+                                      "curie": "skos:definition",
+                                      "target": {
+                                        "nodeType": "literal",
+                                        "value": "Normal is the default value (if no value is provided) and is used when no special coded qualification is assumed. Usually, in this case, it can be assumed that the source agency assigns sufficient confidence to the provided observation and/or the value is not expected to be dramatically revised.",
+                                        "lang": "en"
+                                      }
+                                    },
+                                    {
+                                      "uri": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+                                      "curie": "rdfs:subPropertyOf",
+                                      "target": {
+                                        "nodeType": "resource",
+                                        "value": "http://purl.org/linked-data/sdmx/2009/code#obsStatus-A",
+                                        "rdfTypes": [],
+                                        "links": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "uri": "http://www.w3.org/2004/02/skos/core#hasTopConcept",
+                                "curie": "skos:hasTopConcept",
+                                "target": {
+                                  "nodeType": "cell-as-resource",
+                                  "expression": "cells[\"StructureURI\"].value+\"obsStatus-E\"",
+                                  "isRowNumberCell": true,
+                                  "rdfTypes": [
+                                    {
+                                      "uri": "http://www.w3.org/2004/02/skos/core#Concept",
+                                      "curie": "skos:Concept"
+                                    }
+                                  ],
+                                  "links": [
+                                    {
+                                      "uri": "http://www.w3.org/2004/02/skos/core#prefLabel",
+                                      "curie": "skos:prefLabel",
+                                      "target": {
+                                        "nodeType": "literal",
+                                        "value": "Estimated value",
+                                        "lang": "en"
+                                      }
+                                    },
+                                    {
+                                      "uri": "http://www.w3.org/2004/02/skos/core#inScheme",
+                                      "curie": "skos:inScheme",
+                                      "target": {
+                                        "nodeType": "cell-as-resource",
+                                        "expression": "cells[\"StructureURI\"].value+\"codes-obsStatus\"",
+                                        "isRowNumberCell": true,
+                                        "rdfTypes": [],
+                                        "links": []
+                                      }
+                                    },
+                                    {
+                                      "uri": "http://www.w3.org/2004/02/skos/core#definition",
+                                      "curie": "skos:definition",
+                                      "target": {
+                                        "nodeType": "literal",
+                                        "value": "This value has been estimated.",
+                                        "lang": "en"
+                                      }
+                                    },
+                                    {
+                                      "uri": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+                                      "curie": "rdfs:subPropertyOf",
+                                      "target": {
+                                        "nodeType": "resource",
+                                        "value": "http://purl.org/linked-data/sdmx/2009/code#obsStatus-E",
+                                        "rdfTypes": [],
+                                        "links": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "uri": "http://www.w3.org/2004/02/skos/core#hasTopConcept",
+                                "curie": "skos:hasTopConcept",
+                                "target": {
+                                  "nodeType": "cell-as-resource",
+                                  "expression": "cells[\"StructureURI\"].value+\"obsStatus-M-LowValue\"",
+                                  "isRowNumberCell": true,
+                                  "rdfTypes": [
+                                    {
+                                      "uri": "http://www.w3.org/2004/02/skos/core#Concept",
+                                      "curie": "skos:Concept"
+                                    }
+                                  ],
+                                  "links": [
+                                    {
+                                      "uri": "http://www.w3.org/2004/02/skos/core#prefLabel",
+                                      "curie": "skos:prefLabel",
+                                      "target": {
+                                        "nodeType": "literal",
+                                        "value": "Missing value - Global Hunger Index of less than 5",
+                                        "lang": "en"
+                                      }
+                                    },
+                                    {
+                                      "uri": "http://www.w3.org/2004/02/skos/core#inScheme",
+                                      "curie": "skos:inScheme",
+                                      "target": {
+                                        "nodeType": "cell-as-resource",
+                                        "expression": "cells[\"StructureURI\"].value+\"codes-obsStatus\"",
+                                        "isRowNumberCell": true,
+                                        "rdfTypes": [],
+                                        "links": []
+                                      }
+                                    },
+                                    {
+                                      "uri": "http://www.w3.org/2004/02/skos/core#definition",
+                                      "curie": "skos:definition",
+                                      "target": {
+                                        "nodeType": "literal",
+                                        "value": "Data can be missing due to various reasons:  data do not exist, are insignificant (or not collected because they are below a certain threshold), are unreliable, are not relevant for the period, or other reason not elsewhere specified. In the Global Hunger Index, countries with the GHI of less than 5 are shown as '<5'. In the RDF dataset, this is registered as a missing value to keep a consistent data type for the GHI measure.",
+                                        "lang": "en"
+                                      }
+                                    },
+                                    {
+                                      "uri": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+                                      "curie": "rdfs:subPropertyOf",
+                                      "target": {
+                                        "nodeType": "resource",
+                                        "value": "tp://purl.org/linked-data/sdmx/2009/code#obsStatus-M",
+                                        "rdfTypes": [],
+                                        "links": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "uri": "http://www.w3.org/2004/02/skos/core#hasTopConcept",
+                                "curie": "skos:hasTopConcept",
+                                "target": {
+                                  "nodeType": "cell-as-resource",
+                                  "expression": "cells[\"StructureURI\"].value+\"obsStatus-M\"",
+                                  "isRowNumberCell": true,
+                                  "rdfTypes": [
+                                    {
+                                      "uri": "http://www.w3.org/2004/02/skos/core#Concept",
+                                      "curie": "skos:Concept"
+                                    }
+                                  ],
+                                  "links": [
+                                    {
+                                      "uri": "http://www.w3.org/2004/02/skos/core#prefLabel",
+                                      "curie": "skos:prefLabel",
+                                      "target": {
+                                        "nodeType": "literal",
+                                        "value": "Missing Value",
+                                        "lang": "en"
+                                      }
+                                    },
+                                    {
+                                      "uri": "http://www.w3.org/2004/02/skos/core#inScheme",
+                                      "curie": "skos:inScheme",
+                                      "target": {
+                                        "nodeType": "cell-as-resource",
+                                        "expression": "cells[\"StructureURI\"].value+\"codes-obsStatus\"",
+                                        "isRowNumberCell": true,
+                                        "rdfTypes": [],
+                                        "links": []
+                                      }
+                                    },
+                                    {
+                                      "uri": "http://www.w3.org/2004/02/skos/core#definition",
+                                      "curie": "skos:definition",
+                                      "target": {
+                                        "nodeType": "literal",
+                                        "value": "Missing data",
+                                        "lang": "en"
+                                      }
+                                    },
+                                    {
+                                      "uri": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+                                      "curie": "rdfs:subPropertyOf",
+                                      "target": {
+                                        "nodeType": "resource",
+                                        "value": "tp://purl.org/linked-data/sdmx/2009/code#obsStatus-M",
+                                        "rdfTypes": [],
+                                        "links": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://purl.org/linked-data/cube#component",
+              "curie": "qb:component",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "cells[\"StructureURI\"].value+\"c8\"",
+                "isRowNumberCell": true,
+                "rdfTypes": [],
+                "links": [
+                  {
+                    "uri": "http://purl.org/linked-data/cube#measure",
+                    "curie": "qb:measure",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "cells[\"StructureURI\"].value+\"GHI\"",
+                      "isRowNumberCell": true,
+                      "rdfTypes": [
+                        {
+                          "uri": "http://purl.org/linked-data/cube#MeasureProperty",
+                          "curie": "qb:MeasureProperty"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+                          "curie": "rdfs:label",
+                          "target": {
+                            "nodeType": "literal",
+                            "value": "Global Hunger Index",
+                            "lang": "en"
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+                          "curie": "rdfs:subPropertyOf",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://purl.org/linked-data/sdmx/2009/measure#obsValue",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#comment",
+                          "curie": "rdfs:comment",
+                          "target": {
+                            "nodeType": "literal",
+                            "value": "(1990) The 1990 GHI draws on data from 1988 - 1992",
+                            "lang": "en"
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#comment",
+                          "curie": "rdfs:comment",
+                          "target": {
+                            "nodeType": "literal",
+                            "value": "(2010) The 2010 GHI draws on data from 2003 - 2008",
+                            "lang": "en"
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#comment",
+                          "curie": "rdfs:comment",
+                          "target": {
+                            "nodeType": "literal",
+                            "value": "The Global Hunger Index (GHI) is a tool adapted and further developed by the International Food Policy Research Institute (IFPRI) to compre- hensively measure and track global hunger.1 The GHI incorporates three interlinked hunger-related indicators – the proportion of under- nourished in the population, the prevalence of underweight in children, and the mortality rate of children.",
+                            "lang": "en"
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#comment",
+                          "curie": "rdfs:comment",
+                          "target": {
+                            "nodeType": "literal",
+                            "value": "The Global Hunger Index (GHI) is calculated by the weighted average of three measures. GHI = (PUN + PUW + U5MR)/3",
+                            "lang": "en"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://purl.org/linked-data/cube#component",
+              "curie": "qb:component",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "cells[\"StructureURI\"].value+\"c9\"",
+                "isRowNumberCell": true,
+                "rdfTypes": [],
+                "links": [
+                  {
+                    "uri": "http://purl.org/linked-data/cube#dimension",
+                    "curie": "qb:dimension",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "cells[\"StructureURI\"].value+\"yearOfGHIPublication\"",
+                      "isRowNumberCell": true,
+                      "rdfTypes": [
+                        {
+                          "uri": "http://purl.org/linked-data/cube#DimensionProperty",
+                          "curie": "qb:DimensionProperty"
+                        },
+                        {
+                          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                          "curie": "rdf:Property"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+                          "curie": "rdfs:label",
+                          "target": {
+                            "nodeType": "literal",
+                            "value": "Year of GHI Publication",
+                            "lang": "en"
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#comment",
+                          "curie": "rdfs:comment",
+                          "target": {
+                            "nodeType": "literal",
+                            "value": "The GHI is published annually based on data available at that time. Sometime the final GHI for a particular year will be revised in a later year based on improved access to data (so the 2011 GHI publication could update the 2010 GHI value. You should look for the most recent statistics by looking for the LastRevised property",
+                            "lang": "en"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://purl.org/linked-data/cube#component",
+              "curie": "qb:component",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "cells[\"StructureURI\"].value+\"c10\"",
+                "isRowNumberCell": true,
+                "rdfTypes": [],
+                "links": [
+                  {
+                    "uri": "http://purl.org/linked-data/cube#dimension",
+                    "curie": "qb:dimension",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "cells[\"StructureURI\"].value+\"lastRevised\"",
+                      "isRowNumberCell": true,
+                      "rdfTypes": [
+                        {
+                          "uri": "http://purl.org/linked-data/cube#DimensionProperty",
+                          "curie": "qb:DimensionProperty"
+                        },
+                        {
+                          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                          "curie": "rdf:Property"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+                          "curie": "rdfs:label",
+                          "target": {
+                            "nodeType": "literal",
+                            "value": "Last Revised",
+                            "lang": "en"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "cells[\"ObservationURI\"].value+\"data\"",
+          "isRowNumberCell": true,
+          "rdfTypes": [
+            {
+              "uri": "http://purl.org/linked-data/cube#DataSet",
+              "curie": "qb:DataSet"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://purl.org/linked-data/cube#structure",
+              "curie": "qb:structure",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "substring(cells[\"StructureURI\"].value,0,-1)",
+                "isRowNumberCell": true,
+                "rdfTypes": [],
+                "links": []
+              }
+            },
+            {
+              "uri": "http://purl.org/dc/terms/created",
+              "curie": "dc:created",
+              "target": {
+                "nodeType": "literal",
+                "value": "2010-10-01",
+                "valueType": "http://www.w3.org/2001/XMLSchema#date"
+              }
+            },
+            {
+              "uri": "http://purl.org/dc/terms/creator",
+              "curie": "dc:creator",
+              "target": {
+                "nodeType": "resource",
+                "value": "http://www.ifpri.org",
+                "rdfTypes": [],
+                "links": []
+              }
+            },
+            {
+              "uri": "http://purl.org/dc/terms/description",
+              "curie": "dc:description",
+              "target": {
+                "nodeType": "literal",
+                "value": "Data and supporting data for the 2010 Global Hunger Index, including revised comparison data for 1990. An innovative, enhanced approach for measuring hunger and undernutrition.",
+                "lang": "en"
+              }
+            },
+            {
+              "uri": "http://purl.org/dc/terms/title",
+              "curie": "dc:title",
+              "target": {
+                "nodeType": "literal",
+                "value": "2010 Global Hunger Index Data",
+                "lang": "en"
+              }
+            },
+            {
+              "uri": "http://www.w3.org/2000/01/rdf-schema#comment",
+              "curie": "rdfs:comment",
+              "target": {
+                "nodeType": "literal",
+                "value": "Due to enhancements and revisions to the underlying data in the 2010 Global Hunger Index, figures are not directly comparable to previous years. See the 2010 GHI Report for more details.",
+                "lang": "en"
+              }
+            },
+            {
+              "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+              "curie": "rdfs:label",
+              "target": {
+                "nodeType": "literal",
+                "value": "Global Hunger Index 2010 Report Data",
+                "lang": "en"
+              }
+            },
+            {
+              "uri": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+              "curie": "rdfs:seeAlso",
+              "target": {
+                "nodeType": "resource",
+                "value": "http://www.ifpri.org/publication/2010-global-hunger-index",
+                "rdfTypes": [],
+                "links": []
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "cells[\"ObservationURI\"].value+cells[\"Measure\"].value+\"-\"+substring(cells[\"Period\"].value,0,4)+\"-\"+cells[\"CountryCode\"].value",
+          "isRowNumberCell": true,
+          "rdfTypes": [
+            {
+              "uri": "http://purl.org/linked-data/cube#Observation",
+              "curie": "qb:Observation"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://data.kasabi.com/dataset/global-hunger-index/structure/refArea",
+              "curie": "ghiqb:refArea",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "\"http://www.geonames.org/\"+value+\"/\"",
+                "isRowNumberCell": false,
+                "columnName": "GeonamesID",
+                "rdfTypes": [],
+                "links": [
+                  {
+                    "uri": "http://www.w3.org/2002/07/owl#sameAs",
+                    "curie": "owl:sameAs",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "\"http://ontologi.es/place/\"+value",
+                      "isRowNumberCell": false,
+                      "columnName": "CountryCode",
+                      "rdfTypes": [],
+                      "links": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://data.kasabi.com/dataset/global-hunger-index/structure/refPeriod",
+              "curie": "ghiqb:refPeriod",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Period"
+              }
+            },
+            {
+              "uri": "http://data.kasabi.com/dataset/global-hunger-index/structure/obsStatus",
+              "curie": "ghiqb:obsStatus",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "cells[\"StructureURI\"].value+\"obsStatus-\"+if(value==0,\"A\",if(value==null,if(cells[\"Observation\"].value==\"-\",\"M\",if(cells[\"Observation\"].value==\"<5\",\"M-LowValue\",\"A\")),\"E\"))",
+                "isRowNumberCell": false,
+                "columnName": "Estimate"
+              }
+            },
+            {
+              "uri": "http://purl.org/linked-data/cube#measureType",
+              "curie": "qb:measureType",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "cells[\"StructureURI\"].value+if(not(value==\"GHI\"),\"supportingData\",\"\")+value",
+                "isRowNumberCell": false,
+                "columnName": "Measure",
+                "rdfTypes": [],
+                "links": []
+              }
+            },
+            {
+              "uri": "http://data.kasabi.com/dataset/global-hunger-index/structure/supportingDataPUN",
+              "curie": "ghiqb:supportingDataPUN",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "if(cells[\"Measure\"].value==\"PUN\",if(isNumeric(value),value,\"\"),null)",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#double",
+                "columnName": "Observation"
+              }
+            },
+            {
+              "uri": "http://data.kasabi.com/dataset/global-hunger-index/structure/supportingDataPUW",
+              "curie": "ghiqb:supportingDataPUW",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "if(cells[\"Measure\"].value==\"PUW\",if(isNumeric(value),value,\"\"),null)",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#double",
+                "columnName": "Observation"
+              }
+            },
+            {
+              "uri": "http://data.kasabi.com/dataset/global-hunger-index/structure/supportingDataU5MR",
+              "curie": "ghiqb:supportingDataU5MR",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "if(cells[\"Measure\"].value==\"U5MR\",if(isNumeric(value),value,\"\"),null)",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#double",
+                "columnName": "Observation"
+              }
+            },
+            {
+              "uri": "http://data.kasabi.com/dataset/global-hunger-index/structure/GHI",
+              "curie": "ghiqb:GHI",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "if(cells[\"Measure\"].value==\"GHI\",if(isNumeric(value),value,\"\"),null)",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#double",
+                "columnName": "Observation"
+              }
+            },
+            {
+              "uri": "http://purl.org/linked-data/cube#dataSet",
+              "curie": "qb:dataSet",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "cells[\"ObservationURI\"].value+\"data\"",
+                "isRowNumberCell": true,
+                "rdfTypes": [],
+                "links": []
+              }
+            },
+            {
+              "uri": "http://data.kasabi.com/dataset/global-hunger-index/structure/yearOfGHIPublication",
+              "curie": "ghiqb:yearOfGHIPublication",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "GHIYear"
+              }
+            },
+            {
+              "uri": "http://data.kasabi.com/dataset/global-hunger-index/structure/lastRevised",
+              "curie": "ghiqb:lastRevised",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#date",
+                "columnName": "LastRevised"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
