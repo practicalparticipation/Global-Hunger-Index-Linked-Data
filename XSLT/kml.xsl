@@ -7,7 +7,7 @@
 
 <xsl:template match="*">
 	<kml xmlns="http://www.opengis.net/kml/2.2">
-		<document>
+		<Document>
 			<name>Global Hunger Index</name>
 		    <open>1</open>
 <xsl:for-each select="//res:result">
@@ -21,7 +21,7 @@
   </Placemark>
 
 </xsl:for-each>
- </document>
+ </Document>
 </kml>
 
 </xsl:template>
