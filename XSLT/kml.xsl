@@ -7,18 +7,19 @@
 
 <xsl:template match="*">
 	<kml xmlns="http://www.opengis.net/kml/2.2">
-	
+		<document>
 <xsl:for-each select="//res:result">
 	
 	<Placemark>
     <name><xsl:value-of select="res:binding[@name='areaName']/res:literal"/></name>
     <description><xsl:value-of select="res:binding[@name='referenceYear']/res:literal"/> GHI Value: <xsl:value-of select="res:binding[@name='ghi']/res:literal"/></description>
     <Point>
-      <coordinates><xsl:value-of select="res:binding[@name='long']/res:literal"/>,<xsl:value-of select="res:binding[@name='lat']/res:literal"/>,0</coordinates>
+      <coordinates><xsl:value-of select="res:binding[@name='long']/res:literal"/>,<xsl:value-of select="res:binding[@name='lat']/res:literal"/></coordinates>
     </Point>
   </Placemark>
 
 </xsl:for-each>
+ </document>
 </kml>
 
 </xsl:template>
