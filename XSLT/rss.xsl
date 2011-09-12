@@ -18,7 +18,7 @@
 	</rss:channel>
 	
 <xsl:for-each select="//res:result">
-	<rss:item rdf:about="res:binding[@name='area']/res:uri">
+	<rss:item rdf:about="{res:binding[@name='area']/res:uri}">
 		<rss:link><xsl:value-of select="res:binding[@name='observation']/res:uri"/></rss:link>
 		<rss:title><xsl:value-of select="res:binding[@name='referenceYear']/res:literal"/></rss:title>
 		<rss:description><xsl:value-of select="res:binding[@name='ghi']/res:literal"/></rss:description>
